@@ -1,7 +1,7 @@
 {
   "name": "risk-server",
   "version": "1.0.0",
-  "description": "risk assesment api server",
+  "description": "risk assessment api server",
   "keywords": [
     "loopback-application",
     "loopback"
@@ -13,29 +13,28 @@
   "scripts": {
     "build": "lb-tsc",
     "build:watch": "lb-tsc --watch",
-    "lint": "npm run prettier:check && npm run eslint",
-    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "lint": "yarn run prettier:check && yarn run eslint",
+    "lint:fix": "yarn run eslint:fix && yarn run prettier:fix",
     "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
-    "prettier:check": "npm run prettier:cli -- -l",
-    "prettier:fix": "npm run prettier:cli -- --write",
+    "prettier:check": "yarn run prettier:cli -- -l",
+    "prettier:fix": "yarn run prettier:cli -- --write",
     "eslint": "lb-eslint --report-unused-disable-directives .",
-    "eslint:fix": "npm run eslint -- --fix",
-    "pretest": "npm run clean && npm run build",
+    "eslint:fix": "yarn run eslint -- --fix",
+    "pretest": "yarn run clean && yarn run build",
     "test": "lb-mocha --allow-console-logs \"dist/__tests__\"",
-    "posttest": "npm run lint",
-    "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
+    "posttest": "yarn run lint",
+    "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && yarn run posttest",
     "docker:build": "docker build -t risk-server .",
     "docker:run": "docker run -p 3000:3000 -d risk-server",
     "migrate": "node ./dist/migrate",
-    "prestart": "npm run build",
-    "start": "node -r source-map-support/register .",
+    "start": "node .",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache"
   },
   "repository": {
     "type": "git"
   },
-  "author": "",
-  "license": "",
+  "author": "khizar",
+  "license": "MIT",
   "files": [
     "README.md",
     "index.js",
@@ -57,16 +56,16 @@
   },
   "devDependencies": {
     "@loopback/build": "^5.3.1",
-    "source-map-support": "^0.5.19",
+    "@loopback/eslint-config": "^6.0.6",
     "@loopback/testlab": "^3.1.3",
     "@types/node": "^10.17.21",
-    "@typescript-eslint/parser": "^2.31.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@loopback/eslint-config": "^6.0.6",
+    "@typescript-eslint/parser": "^2.31.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-eslint-plugin": "^2.2.1",
     "eslint-plugin-mocha": "^6.3.0",
+    "source-map-support": "^0.5.19",
     "typescript": "~3.8.3"
   }
 }
