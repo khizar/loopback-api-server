@@ -1,0 +1,12 @@
+{
+  "ids": {
+    "Risk": 4
+  },
+  "models": {
+    "Risk": {
+      "1": "{\"level\":\"Low\",\"description\":\"A conservative set of investments designed to result in slow growth over time.\",\"id\":1}",
+      "2": "{\"level\":\"Medium\",\"description\":\"A mix of investments designed to result in average growth over time.\",\"id\":2}",
+      "3": "{\"level\":\"High\",\"description\":\"Stocks only. No bonds or cash.\",\"id\":3}"
+    }
+  }
+}
