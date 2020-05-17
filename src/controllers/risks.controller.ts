@@ -19,7 +19,7 @@ import {
 import {Risk} from '../models';
 import {RiskRepository} from '../repositories';
 
-export class RiskControllerController {
+export class RisksController {
   constructor(
     @repository(RiskRepository)
     public riskRepository : RiskRepository,
