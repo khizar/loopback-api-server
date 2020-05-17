@@ -1,0 +1,3 @@
+applications:
+- name: khizar-api-sandbox
+  memory: 256M
