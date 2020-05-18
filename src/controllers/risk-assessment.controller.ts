@@ -34,7 +34,6 @@ export class RiskAssessmentController {
     })
     answers: Query[]
   ): Promise<Risk> {
-    console.log(answers);
     const assesedRiskId = Math.floor(Math.random() * (3 - 1 + 1) + 1);
     return this.riskRepository.findById(assesedRiskId);
   }
