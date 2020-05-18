@@ -2,10 +2,10 @@ import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
 const config = {
-  name: 'risk',
+  name: 'question',
   connector: 'memory',
   localStorage: '',
-  file: './data/risks.json'
+  file: './data/queries.json'
 };
 
 // Observe application's life cycle to disconnect the datasource when
@@ -13,13 +13,13 @@ const config = {
 // gracefully. The `stop()` method is inherited from `juggler.DataSource`.
 // Learn more at https://loopback.io/doc/en/lb4/Life-cycle.html
 @lifeCycleObserver('datasource')
-export class RiskDataSource extends juggler.DataSource
+export class QuestionDataSource extends juggler.DataSource
   implements LifeCycleObserver {
-  static dataSourceName = 'risk';
+  static dataSourceName = 'question';
   static readonly defaultConfig = config;
 
   constructor(
-    @inject('datasources.config.risk', {optional: true})
+    @inject('datasources.config.question', {optional: true})
     dsConfig: object = config,
   ) {
     super(dsConfig);

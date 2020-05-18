@@ -6,7 +6,7 @@ import {RiskRepository} from '../repositories';
 export class RiskAssessmentController {
   constructor(
     @repository(RiskRepository)
-    public riskRepository : RiskRepository,
+    public riskRepository: RiskRepository,
   ) {}
 
   @post('/assess', {

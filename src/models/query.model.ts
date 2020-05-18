@@ -1,7 +1,7 @@
-import {Model, model, property} from '@loopback/repository';
+import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class Query extends Model {
+export class Query extends Entity {
   @property({
     type: 'string',
   })
@@ -18,7 +18,6 @@ export class Query extends Model {
     generated: true,
   })
   id?: number;
-
 
   constructor(data?: Partial<Query>) {
     super(data);

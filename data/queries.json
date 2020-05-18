@@ -1,0 +1,12 @@
+{
+  "ids": {
+    "Query": 4
+  },
+  "models": {
+    "Query": {
+      "1": "{\"question\":\"I have previously put money in a risky investment.\",\"answer\":\" \",\"id\":1}",
+      "2": "{\"question\":\"I prefer my money to be safe from risk.\",\"answer\":\" \",\"id\":2}",
+      "3": "{\"question\":\"Your friends would say that you are cautious.\",\"answer\":\" \",\"id\":3}"
+    }
+  }
+}
